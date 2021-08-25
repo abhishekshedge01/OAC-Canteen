@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amarante</item>
+        <item>@font/amaranth</item>
+        <item>@font/amita</item>
+        <item>@font/bevan</item>
+        <item>@font/chivo</item>
+        <item>@font/copse</item>
+        <item>@font/cutive</item>
+        <item>@font/merienda_one</item>
+        <item>@font/montserrat_alternates</item>
+        <item>@font/sarala</item>
+    </array>
+</resources>

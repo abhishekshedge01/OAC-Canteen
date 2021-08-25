@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".Forgot"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="7dp"
+            android:fontFamily="@font/sarala"
+            android:padding="15dp"
+            android:text="@string/forgotpassword"
+            android:textColor="#000000"
+            android:textSize="33sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="284dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="7dp"
+            android:fontFamily="@font/amita"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:text="@string/explain"
+            android:textColor="#EA8C02"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+
+        <EditText
+            android:id="@+id/forgot_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="100dp"
+            android:autofillHints=""
+            android:background="@drawable/forgot_rect"
+            android:fontFamily="@font/amarante"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry,TextFields" />
+
+        <Button
+            android:id="@+id/forgot_recover"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/fgtbtn"
+            android:text="@string/recover"
+            android:textAllCaps="false"
+            app:backgroundTint="#FF9800" />
+
+        <TextView
+            android:id="@+id/forgot_back_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/copse"
+            android:padding="5dp"
+            android:text="@string/go_back_to_login_page"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
