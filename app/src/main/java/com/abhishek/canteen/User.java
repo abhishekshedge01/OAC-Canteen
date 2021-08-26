@@ -91,52 +91,6 @@ public class User extends AppCompatActivity {
                 holder.nprice.setText(model.getPrice());
                 String uri=model.getImgurl();
                 Picasso.get().load(uri).into(nimg);
-                ImageView popmenubtn=holder.itemView.findViewById(R.id.popbtn);
-
-                popmenubtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        PopupMenu popupMenu=new PopupMenu(v.getContext(),v);
-                        popupMenu.getMenu().add("edit").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                            @Override
-                            public boolean onMenuItemClick(MenuItem item) {
-                                Intent intent=new Intent(getApplicationContext(),EditActivity.class);
-                                intent.putExtra("name",model.getName());
-                                intent.putExtra("price",model.getPrice());
-                                intent.putExtra("imagelink",model.getImgurl());
-                                intent.putExtra("noteId",docId);
-                                finish();
-                                startActivity(intent);
-                                return false;
-                            }
-                        });
-
-
-                        popupMenu.getMenu().add("delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                            @Override
-                            public boolean onMenuItemClick(MenuItem item) {
-//                                Toast.makeText(v.getContext(),"Deleted",Toast.LENGTH_SHORT).show();
-                                DocumentReference documentreference=firebaseFirestore.collection("admin").document(firebaseUser.getUid()).collection("iteminfo").document(docId);
-                                documentreference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        Toast.makeText(v.getContext(),"Note is Deleted",Toast.LENGTH_SHORT).show();
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(v.getContext(),"Note is not Deleted",Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                                return  false;
-                            }
-                        });
-                        popupMenu.show();
-                    }
-                });
-
-
             }
 
             @NonNull
